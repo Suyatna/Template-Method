@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ProductChat implements Chat {
 
-    private List<String> products = new ArrayList<String>();
+    private List<String> products = new ArrayList<>();
 
     public void setProducts(List<String> products) {
 
