@@ -14,21 +14,10 @@ public class ChatFactory {
             return null;
         }
 
-        if (intent.equalsIgnoreCase("halo")) {
-
-            return new WelcomeChat();
-        }
-
-        if (intent.equalsIgnoreCase("product")) {
-
-            return new ProductChat();
-        }
-
-        if (intent.equalsIgnoreCase("payment")) {
-
-            return new PaymentConfirmationChat();
-        }
-
-        return null;
-    };
+        return switch (intent) {
+            case "confirmation" -> new PaymentConfirmationChat();
+            case "product" -> new ProductChat();
+            default -> new WelcomeChat();
+        };
+    }
 }
