@@ -18,7 +18,7 @@ public class BaseView implements BaseViewTemplate {
     @Override
     public void onCreated() {
 
-        System.out.print("amy i help you? > ");
+        System.out.print("may i help you? > ");
         Scanner scanner = new Scanner(System.in);
         String inputMessage = "";
 
